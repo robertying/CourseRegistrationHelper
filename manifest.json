@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "CourseRegistrationHelper",
+    "description": "Get Your Courses!",
+    "version": "1.0",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {},
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://zhjwxk.cic.tsinghua.edu.cn/xkBks.vxkBksXkbBs.do*"
+            ],
+            "js": [
+                "dismiss_alert.js",
+                "content_script.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
+//http://zhjwxk.cic.tsinghua.edu.cn/xkBks.vxkBksXkbBs.do?m=rxSearch&p_xnxq=2017-2018-1&tokenPriFlag=rx&is_zyrxk=1
